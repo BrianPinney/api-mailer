@@ -1,6 +1,6 @@
 import { db } from "./dbconnect.js";
 
-const coll = db.collection()
+const coll = db.collection("customers")
 
 export async function addCus(req, res){
     const newCus = req.body
@@ -9,8 +9,7 @@ export async function addCus(req, res){
 }
 export async function getAllCus(req, res){
     const unCus = await coll.get()
-    const orgCus = unCus.docs.map(doc => ({
-        ...doc.data(), id: doc.id}))
+    const orgCus = unCus.docs.map(doc => ({...doc.data(), id: doc.id}))
         res.send(orgCus)
 
 }
