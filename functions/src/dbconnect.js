@@ -1,4 +1,4 @@
-import { secrets } from "./secrets";
+import { secrets } from "../secrets.js";
 import { initializeApp, cert } from "firebase-admin/app";
 import { getFirestore } from "firebase-admin/firestore";
 

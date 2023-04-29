@@ -1,5 +1,4 @@
-import { CollectionGroup } from "firebase-admin/firestore";
-import { db } from "./dbconnect";
+import { db } from "./dbconnect.js";
 
 const coll = db.collection()
 
