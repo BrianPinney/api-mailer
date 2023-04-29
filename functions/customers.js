@@ -21,7 +21,7 @@ export async function deleteCus(req, res){
     res.send()
 }
 
-export async function customer(req, res){
+export async function updateCus(req, res){
     const { id } = req.params
     const updateInfo = req.body
     await coll.doc(id).update(updateInfo)
