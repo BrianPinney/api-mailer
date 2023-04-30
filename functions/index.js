@@ -13,6 +13,5 @@ app.patch("/customers/:id", updateCus)
 app.delete("/customers/:id", deleteCus)
 
 
-app.listen(3000, () => console.log(`Listening on http://localhost/3000...`))
 
 export const api = functions.https.onRequest(app)
