@@ -5,7 +5,6 @@ const coll = db.collection("customers")
 export async function addCus(req, res){
     const newCus = req.body
     await coll.add(newCus)
-    getAllCus(req, res)
 }
 export async function getAllCus(req, res){
     const unCus = await coll.get()
