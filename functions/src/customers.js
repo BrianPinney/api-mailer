@@ -6,6 +6,7 @@ export async function addCus(req, res){
     const newCus = req.body
     await coll.add(newCus)
 }
+
 export async function getAllCus(req, res){
     const unCus = await coll.get()
     const orgCus = unCus.docs.map(doc => ({...doc.data(), id: doc.id}))
